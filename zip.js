@@ -12,7 +12,7 @@ zip.file('index.html', fs.readFileSync('./dist/index.html', { encoding: 'utf-8' 
 zip.file('main.js', fs.readFileSync('./dist/main.js', { encoding: 'utf-8' }))
 
 zip
-  .generateNodeStream({ type: 'nodebuffer', streamFiles: true })
+  .generateNodeStream({ type: 'nodebuffer', streamFiles: true, compression: 'DEFLATE', compressionOptions: { level: 9 } })
   .pipe(fs.createWriteStream(filename))
   .on('finish', () => {
     const fsStats = fs.statSync(filename)
