@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   c.width = w.innerWidth
   c.height = w.innerHeight
 
-  c.style.backgroundColor = 'red'
+  c.style.backgroundColor = '#333'
   c.style.verticalAlign = 'bottom'
 
   b.style.margin = 0
