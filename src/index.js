@@ -1,6 +1,6 @@
 function generateTag() {
   let e = document.createElement('p')
-  e.innerText = 'Hello!'
+  e.innerText = 'Mayn!'
   return e
 }
 
