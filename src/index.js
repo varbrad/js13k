@@ -1,19 +1,9 @@
-const d = document
-const b = d.body
-const w = window
-
 window.addEventListener('DOMContentLoaded', () => {
-  const c = d.createElement('canvas')
-  c.width = w.innerWidth
-  c.height = w.innerHeight
+  const canvas = document.createElement('canvas')
+  canvas.width = 240
+  canvas.height = 160
 
-  c.style.backgroundColor = '#333'
-  c.style.verticalAlign = 'bottom'
-
-  b.style.margin = 0
-  b.style.overflow = 'hidden'
-
-  b.appendChild(c)
+  document.body.appendChild(c)
 
   function init() {
     // Do stuff here
