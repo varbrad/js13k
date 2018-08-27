@@ -7,13 +7,13 @@ Making a game under 13Kb for the 2018 JS13K competition
 
 `yarn start`
 
-Runs a webpack development server at `localhost:8080` with hot-reload.
+Runs a parcel development server at `localhost:8080` with hot-reload.
 
 ### Build
 
 `yarn build`
 
-Builds the `index.html` & `main.js` files and places them inside `/dist`.
+Builds the `index.html`, `main.[hash].js` and `style.[hash].css` files and places them inside `/dist`.
 
 ### Zip
 
