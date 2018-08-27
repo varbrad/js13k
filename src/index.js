@@ -1,3 +1,5 @@
+import './style.scss'
+
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.createElement('canvas')
   canvas.width = 240
