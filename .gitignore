@@ -63,3 +63,6 @@ typings/
 # Build files
 dist/
 js13k.zip
+
+# Parcel cache
+.cache/
