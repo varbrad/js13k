@@ -1,21 +1,19 @@
-import { WIDTH, HEIGHT } from './consts'
+import { WIDTH, HEIGHT } from "./consts";
 
 class Game {
   constructor(gc) {
-    this.gc = gc
+    this.gc = gc;
   }
 
   init() {
-
-
-    this.update()
+    this.update();
   }
 
   update() {
-    this.gc.clearRect(0, 0, WIDTH, HEIGHT)
+    this.gc.clearRect(0, 0, WIDTH, HEIGHT);
 
-    requestAnimationFrame(() => this.update())
+    requestAnimationFrame(() => this.update());
   }
 }
 
-export default Game
+export default Game;
