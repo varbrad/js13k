@@ -2,14 +2,20 @@ const JSZip = require('jszip');
 const fs = require('fs');
 const prettyBytes = require('pretty-bytes')
 const chalk = require('chalk')
+const path = require('path')
 
 const filename = 'js13k.zip'
 
 const limit = 13 * 1024 // 13kB
 
+const match_files = /(.*)\.(js|css|html)$/
+
 const zip = new JSZip();
-zip.file('index.html', fs.readFileSync('./dist/index.html', { encoding: 'utf-8' }))
-zip.file('main.js', fs.readFileSync('./dist/main.js', { encoding: 'utf-8' }))
+const files = fs.readdirSync('dist/')
+  .filter(file => match_files.test(file))
+  .forEach(file => {
+    zip.file(file, fs.readFileSync(path.join(__dirname, 'dist', file), { encoding: 'utf-8' }))
+  })
 
 zip
   .generateNodeStream({ type: 'nodebuffer', streamFiles: true, compression: 'DEFLATE', compressionOptions: { level: 9 } })
