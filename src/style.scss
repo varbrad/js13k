@@ -1,3 +1,20 @@
-html, body {
-  background-color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#040904, #091009);
+}
+
+canvas {
+  background-color: #020702;
+  border: 3px solid #0e583c;
+  border-radius: 1rem;
 }

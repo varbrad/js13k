@@ -1,6 +1,7 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
@@ -24,7 +25,8 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       }
-    })
+    }),
+    new HtmlWebpackIncludeAssetsPlugin({ assets: ['src/style.scss'], append: true })
   ],
   optimization: {
     minimizer: [
