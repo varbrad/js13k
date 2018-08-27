@@ -17,6 +17,6 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url ./",
-    "zip": "yarn build && node ./zip.js"
+    "zip": "rm -rf ./dist && yarn build && node ./zip.js"
   }
 }
